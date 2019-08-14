@@ -1,0 +1,24 @@
+---
+- id: home
+  translation: "首页"
+
+- id: latestPosts
+  translation: "近期文章"
+
+- id: pageNotFound
+  translation: "哎呀！找不到该网页..."
+
+- id: readingTime
+  translation: "需要阅读{{ .Count }}分钟"
+
+- id: return
+  translation: "返回"
+
+- id: previousPost
+  translation: "上一篇"
+  
+- id: nextPost
+  translation: "下一篇" 
+
+- id: postCount
+  translation: "共有{{ .Count }}篇文章"

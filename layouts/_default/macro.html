@@ -1,0 +1,337 @@
+{{define "head"}} 
+<meta name="baidu-site-verification" content="jZRrwlvEpq" />
+<meta name="google-site-verification" content="OcQLxKrUrj5A9hpAdCQuoY-K7f5Ja4LUYt35Kxdwq_E" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description" content="{{$.Site.Title}}的博客" />
+<meta name="keywords" content="{{$.Site.Title}}的博客" />
+<meta name="generator" content="Tale" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="x-dns-prefetch-control" content="on" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+<title>{{$.Site.Title}}的博客</title>
+<link rel="shortcut icon" href="https://www.hemm.site/templates/themes/amaze/static/img/favicon.ico">
+<link href="https://cdn.staticfile.org/amazeui/2.7.2/css/amazeui.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://hemm.site/customui.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- CodeHighlight -->
+<style>
+.hljs{display:block;overflow-x:auto;padding:0.5em;color:#383a42;background:#fafafa}.hljs-comment,.hljs-quote{color:#a0a1a7;}.hljs-doctag,.hljs-keyword,.hljs-formula{color:#a626a4}.hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst{color:#e45649}.hljs-literal{color:#0184bb}.hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta-string{color:#50a14f}.hljs-built_in,.hljs-class .hljs-title{color:#c18401}.hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number{color:#986801}.hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title{color:#4078f2}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.hljs-link{text-decoration:underline}
+</style>
+{{end}}
+{{define "nav"}}
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">{{$.Site.Title}}的博客</a>
+            <!-- <a class="navbar-mobile-search" href="https://www.hemm.site/search.html">
+                    <span class="am-icon-search"></span>
+            </a> -->
+      </div>
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                    <li>
+                        <a href="/about">关于</a>
+                    </li>
+                    <li>
+                        <a href="/archives">归档</a>
+                    </li>
+                    <li>
+                        <a href="/links">友链</a>
+                    </li>  
+                 </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<header class="intro-header" style="background-image: url(https://hemm.site/snowgitlabk.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>{{$.Site.Title}}</h1>
+                    <span class="subheading">{{if $.Site.Params.SubTitle}}{{$.Site.Params.SubTitle}}{{else}}这是一个小标题{{end}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{{end}}
+{{define "left-body"}}
+<div class="am-g am-g-fixed blog-fixed">
+    <div class="am-u-lg-8 am-u-sm-12">
+            <article class="am-g blog-entry-article">
+            <div class="am-u-lg-6 am-u-lg-12 am-u-sm-12 blog-entry-text post-preview">
+                <div class="topic-header">
+                    <div class="pull-left">
+                        <div class="blog-flex-center">
+                            <div class="blog-flex0">
+							<img src="https://hemm.site/logo.png-logo" alt="" class="link avatar avatar-image">
+                            </div>
+                            <div class="author-lockup blog-flex1">
+                                <a class="link" href="/archives" >景阳岗上挨过打</a>
+                                <span class="in">in</span>
+                                <span class="category-name">
+                                      <a href="/category/Java">Java</a>                                        
+								</span>
+                            </div>
+                        </div>
+                    </div>
+                <span class="pull-right time pc_time">July 12,2019</span>
+                </div>
+            <h1 class="post-index-title"><a target="_blank" itemtype="url" href="https://www.hemm.site/article/springboot-redis">"SpringBoot项目使用Redis做缓存"</a></h1>
+            <div class="post-content-preview">
+                 SpringBoot项目使用Redis做缓存 最近打算将blog项目重构，由原来的blade框架搭建的tale博客重构为SpringBoot+Freemarker+MyBatis+mysql的项目，并且将原有项目中自实现的缓存替换为中间件Redis缓存 项目地址 第一步、引入Redis依赖 &lt;dependency&gt;
+    &lt;groupId&gt;org.springframe...            
+			</div>
+            <div class="clearfix topic-footer">
+                <span class="pull-left time mobile_time">July 12,2019</span>
+            </div>
+        </article>
+            <article class="am-g blog-entry-article">
+            <div class="am-u-lg-6 am-u-lg-12 am-u-sm-12 blog-entry-text post-preview">
+                <div class="topic-header">
+                    <div class="pull-left">
+                        <div class="blog-flex-center">
+                            <div class="blog-flex0">
+							<img src="https://hemm.site/logo.png-logo" alt="" class="link avatar avatar-image">
+                            </div>
+                            <div class="author-lockup blog-flex1">
+                                <a class="link" href="/archives" >景阳岗上挨过打</a>
+                                <span class="in">in</span>
+                                <span class="category-name">
+                                      <a href="/category/Java">Java</a>                                        
+								</span>
+                            </div>
+                        </div>
+                    </div>
+                <span class="pull-right time pc_time">July 04,2019</span>
+                </div>
+            <h1 class="post-index-title"><a target="_blank" itemtype="url" href="https://www.hemm.site/article/spring-start-exec-operate">"SpringBoot项目启动时执行自定义操作"</a></h1>
+            <div class="post-content-preview">
+                 SpringBoot项目启动时执行自定义操作 最近打算将blog项目重构，由原来的blade框架搭建的tale博客重构为SpringBoot+Freemarker+MyBatis+mysql的项目，这次重构会尽可能的用上SpringBoot的中的组件，方便我们熟悉SpringBoot 项目地址 第一步 创建InitListener 在listener包下创建InitListener，实现 Ser...            
+			</div>
+            <div class="clearfix topic-footer">
+                <span class="pull-left time mobile_time">July 04,2019</span>
+            </div>
+        </article>
+            <article class="am-g blog-entry-article">
+            <div class="am-u-lg-6 am-u-lg-12 am-u-sm-12 blog-entry-text post-preview">
+                <div class="topic-header">
+                    <div class="pull-left">
+                        <div class="blog-flex-center">
+                            <div class="blog-flex0">
+							<img src="https://hemm.site/logo.png-logo" alt="" class="link avatar avatar-image">
+                            </div>
+                            <div class="author-lockup blog-flex1">
+                                <a class="link" href="/archives" >景阳岗上挨过打</a>
+                                <span class="in">in</span>
+                                <span class="category-name">
+                                      <a href="/category/Java">Java</a>                                        
+								</span>
+                            </div>
+                        </div>
+                    </div>
+                <span class="pull-right time pc_time">July 04,2019</span>
+                </div>
+            <h1 class="post-index-title"><a target="_blank" itemtype="url" href="https://www.hemm.site/article/spring-use-ourself-properties">"SpringBoot自定义配置文件"</a></h1>
+            <div class="post-content-preview">
+                 SpringBoot自定义配置文件 最近打算将blog项目重构，由原来的blade框架搭建的tale博客重构为SpringBoot+Freemarker+MyBatis+mysql的项目，这次重构会尽可能的用上SpringBoot的中的组件，方便我们熟悉SpringBoot 项目地址 第一步，创建配置文件 在resources下创建blog.properties，内容如下 blog.enable...            
+			</div>
+            <div class="clearfix topic-footer">
+                <span class="pull-left time mobile_time">July 04,2019</span>
+            </div>
+        </article>
+            <article class="am-g blog-entry-article">
+            <div class="am-u-lg-6 am-u-lg-12 am-u-sm-12 blog-entry-text post-preview">
+                <div class="topic-header">
+                    <div class="pull-left">
+                        <div class="blog-flex-center">
+                            <div class="blog-flex0">
+							<img src="https://hemm.site/logo.png-logo" alt="" class="link avatar avatar-image">
+                            </div>
+                            <div class="author-lockup blog-flex1">
+                                <a class="link" href="/archives" >景阳岗上挨过打</a>
+                                <span class="in">in</span>
+                                <span class="category-name">
+                                      <a href="/category/Java">Java</a>                                        
+								</span>
+                            </div>
+                        </div>
+                    </div>
+                <span class="pull-right time pc_time">July 03,2019</span>
+                </div>
+            <h1 class="post-index-title"><a target="_blank" itemtype="url" href="https://www.hemm.site/article/intrduce-java8-later-version">"Java8、9、10、11简介"</a></h1>
+            <div class="post-content-preview">
+                 Java8、9、10、11简介 不知不觉Java已经更新到了Java12，但是大多数从事Java相关开发人员依然在使用Java8，对于Jdk8中的新特性也不够了解，甚至仍在使用Java7以前的语法和方式编写Java程序，因为Java11是2018发布的长期支持版本（到2026年9月），而Java11以后的12到下一个长期支持版本大约要在2021年发布，作为开发人员，部分企业先后已升级到Jdk11...            
+			</div>
+            <div class="clearfix topic-footer">
+                <span class="pull-left time mobile_time">July 03,2019</span>
+            </div>
+        </article>
+            <article class="am-g blog-entry-article">
+            <div class="am-u-lg-6 am-u-lg-12 am-u-sm-12 blog-entry-text post-preview">
+                <div class="topic-header">
+                    <div class="pull-left">
+                        <div class="blog-flex-center">
+                            <div class="blog-flex0">
+							<img src="https://hemm.site/logo.png-logo" alt="" class="link avatar avatar-image">
+                            </div>
+                            <div class="author-lockup blog-flex1">
+                                <a class="link" href="/archives" >景阳岗上挨过打</a>
+                                <span class="in">in</span>
+                                <span class="category-name">
+                                      <a href="/category/MySQL">MySQL</a>                                        
+								</span>
+                            </div>
+                        </div>
+                    </div>
+                <span class="pull-right time pc_time">July 03,2019</span>
+                </div>
+            <h1 class="post-index-title"><a target="_blank" itemtype="url" href="https://www.hemm.site/article/windows-install-mysql">"Windows上配置免安装版MySQL"</a></h1>
+            <div class="post-content-preview">
+                 Windows上配置免安装版MySQL 软件版本 MySQL Community Server 5.7.17 解压到本地，最好不要有中文路径 1：下载并解压 下载好后解压到本地。 解压后的文件如下所示 2：新建my.ini文件 复制my-default.ini文件并粘贴（没有自己创建一个mysql.ini放到mysql根目录），改名为my.ini 然后将里面的文本内容替换为 [mysql]
+
+#...            
+			</div>
+            <div class="clearfix topic-footer">
+                <span class="pull-left time mobile_time">July 03,2019</span>
+            </div>
+        </article>
+		<ul class="am-pagination">
+            
+
+            </li>
+            
+<a class="next" title="" href="/page/2"><li class="am-pagination-next"> Next »</a>
+
+            </li>
+        </ul>
+    </div>
+{{end}}
+{{define "right-body"}}
+<div class="am-u-lg-4 am-u-sm-10 am-u-lg-offset-0 am-u-sm-offset-0 sidebar-container">
+    <section>
+        <div class="sidebar-header">
+            <span class="sidebar-header-title">
+                关于博主
+            </span>
+        </div>
+        <ul class="list-inline">
+            <li>
+                <a class="am-icon-btn am-icon-qq" target="_blank" itemtype="url" href="tencent://message/?uin={{$.Site.Params.QQ}}&Site=junichi&Menu=yes"></a>
+            </li>
+            <li>
+                <a class="am-icon-btn am-icon-github" target="_blank" itemtype="url" href="https://github.com/{{$.Site.Params.GitHub}}"></a>
+            </li>
+            <li>
+                <a class="am-icon-btn am-icon-weibo" target="_blank" itemtype="url" href="http://weibo.com/{{$.Site.Params.WeiBo}}"></a>
+            </li>
+            </ul>
+    </section>
+    <section>
+        <div class="sidebar-header">
+            <span class="sidebar-header-title">
+                分类列表
+            </span>
+        </div>
+        <div class="sidebar-list">
+        <ul class="sidebar-list-body sidebar-list-items">
+        <li class="sidebar-list-item">
+		<a href="https://www.hemm.site/category/Java">Java (8)</a>
+		</li>
+        <li class="sidebar-list-item">
+		<a href="https://www.hemm.site/category/default">default (8)</a>
+		</li>
+        <li class="sidebar-list-item">
+		<a href="https://www.hemm.site/category/Linux">Linux (4)</a>
+		</li>
+        <li class="sidebar-list-item">
+		<a href="https://www.hemm.site/category/JavaScript">JavaScript (3)</a>
+		</li>
+        <li class="sidebar-list-item">
+		<a href="https://www.hemm.site/category/MySQL">MySQL (2)</a>
+		</li>
+        <li class="sidebar-list-item">
+		<a href="https://www.hemm.site/category/CSS">CSS (2)</a>
+		</li>
+        <li class="sidebar-list-item">
+		<a href="https://www.hemm.site/category/windows">windows (1)</a>
+		</li>
+        <li class="sidebar-list-item">
+		<a href="https://www.hemm.site/category/Python">Python (1)</a>
+		</li>
+        </ul>
+        </div>
+    </section>
+    <section>
+        <div class="sidebar-header">
+            <span class="sidebar-header-title">
+                标签列表
+            </span>
+        </div>
+        <div class="tags">
+            <a href="https://www.hemm.site/tag/SpringBoot/">SpringBoot</a>            <a href="https://www.hemm.site/tag/Ubuntu/">Ubuntu</a>            <a href="https://www.hemm.site/tag/JavaWeb/">JavaWeb</a>            <a href="https://www.hemm.site/tag/ubuntu/">ubuntu</a>            <a href="https://www.hemm.site/tag/Redis/">Redis</a>            <a href="https://www.hemm.site/tag/IE/">IE</a>            <a href="https://www.hemm.site/tag/JavaScript/">JavaScript</a>            <a href="https://www.hemm.site/tag/java11/">java11</a>            <a href="https://www.hemm.site/tag/java10/">java10</a>            <a href="https://www.hemm.site/tag/java9/">java9</a>            <a href="https://www.hemm.site/tag/java8/">java8</a>            <a href="https://www.hemm.site/tag/mysql/">mysql</a>            <a href="https://www.hemm.site/tag/windows/">windows</a>            <a href="https://www.hemm.site/tag/SQL/">SQL</a>            <a href="https://www.hemm.site/tag/软件/">软件</a>            <a href="https://www.hemm.site/tag/静态变量/">静态变量</a>            <a href="https://www.hemm.site/tag/基础/">基础</a>            <a href="https://www.hemm.site/tag/bottle/">bottle</a>            <a href="https://www.hemm.site/tag/Reflect/">Reflect</a>            <a href="https://www.hemm.site/tag/wsl/">wsl</a>            <a href="https://www.hemm.site/tag/ArchLinux/">ArchLinux</a>            <a href="https://www.hemm.site/tag/Linux/">Linux</a>            <a href="https://www.hemm.site/tag/CSS/">CSS</a>        </div>
+    </section>
+    <section>
+        <div class="sidebar-header">
+            <span class="sidebar-header-title">
+                最新文章
+            </span>
+        </div>
+        <div class="sidebar-list">
+        <ul class="sidebar-list-body sidebar-list-items">
+        <li class="sidebar-list-item"><a href="https://www.hemm.site/article/springboot-redis">SpringBoot项目使用Redis做缓存</a></li>
+        <li class="sidebar-list-item"><a href="https://www.hemm.site/article/spring-start-exec-operate">SpringBoot项目启动时执行自定义操作</a></li>
+        <li class="sidebar-list-item"><a href="https://www.hemm.site/article/spring-use-ourself-properties">SpringBoot自定义配置文件</a></li>
+        <li class="sidebar-list-item"><a href="https://www.hemm.site/article/intrduce-java8-later-version">Java8、9、10、11简介</a></li>
+        <li class="sidebar-list-item"><a href="https://www.hemm.site/article/windows-install-mysql">Windows上配置免安装版MySQL</a></li>
+        </ul>
+        </div>
+		</section>   
+  </div></div>
+{{end}}
+{{define "footer"}}
+<footer class="blog-footer">
+    <ul class="list-inline text-center">
+	    <li>
+            <a href="https://github.com/zoujiayu/tale-theme-amaze" target="_blank"/>
+            <span class="am-icon-btn am-icon-md am-icon-github footer-icon"></span>
+        </li>
+    </ul>
+    <div class="blog-text-center">© 2019 <a href="/">{{$.Site.Title}}</a> 由 
+        <a href="https://github.com/otale/tale" target="_blank">Hugo</a>
+         强力驱动 Theme is 
+        <a href="https://github.com/zoujiayu/tale-theme-amaze" target="_blank">Amaze made by heemooo</a>
+    </div>
+</footer>
+<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://hemm.site/jshtml-activate-power-mode.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+    var $body=document.body;var $toggle=document.querySelector(".navbar-toggle");var $navbar=document.querySelector("#huxblog_navbar");var $collapse=document.querySelector(".navbar-collapse");var __HuxNav__={close:function(){$navbar.className=" ";setTimeout(function(){if($navbar.className.indexOf("in")<0){$collapse.style.height="0px"}},400)},open:function(){$collapse.style.height="auto";$navbar.className+=" in"}};$toggle.addEventListener("click",function(a){if($navbar.className.indexOf("in")>0){__HuxNav__.close()}else{__HuxNav__.open()}});document.addEventListener("click",function(a){if(a.target==$toggle){return}if(a.target.className=="icon-bar"){return}__HuxNav__.close()});jQuery(document).ready(function(c){var d=1170;if(c(window).width()>d){var b=c(".navbar-custom").height(),a=c(".intro-header .container").height();c(window).on("scroll",{previousTop:0},function(){var e=c(window).scrollTop(),f=c(".side-catalog");if(e<this.previousTop){if(e>0&&c(".navbar-custom").hasClass("is-fixed")){c(".navbar-custom").addClass("is-visible")}else{c(".navbar-custom").removeClass("is-visible is-fixed")}}else{c(".navbar-custom").removeClass("is-visible");if(e>b&&!c(".navbar-custom").hasClass("is-fixed")){c(".navbar-custom").addClass("is-fixed")}}this.previousTop=e;f.show();if(e>(a+41)){f.addClass("fixed")}else{f.removeClass("fixed")}})}});
+</script>
+<script>
+    $(document).ready(function() {
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block)
+        })
+        $('table').addClass('am-table')
+    });
+	POWERMODE.colorful = true; // make power mode colorful
+	POWERMODE.shake = false; // turn off shake
+	document.body.addEventListener('input', POWERMODE);                                                                                                     
+</script>
+{{end}}
