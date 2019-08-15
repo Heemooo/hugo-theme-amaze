@@ -1,0 +1,18 @@
+baseURL = "http://example.org/"
+languageCode = "zh_cn"
+title = "景阳冈上挨过打"
+theme = "amaze"
+watch = true
+uglyURLs = true
+[Params]
+slidesDirPath = "themes/AllinOne/static/img/header-slides"
+slidesDirPathURL = "img/header-slides"
+SubTitle = "逍遥天地外，不在五行中"
+GitHub = "heemooo"
+QQ = "396518407"
+WeiBo = "狗一样的江湖"
+backgroundUrl = "https://hemm.site/snowgitlabk.jpg"
+logo = "https://hemm.site/logo.png-logo"
+[taxonomies]
+  category = "categories"
+  tag = "tags"

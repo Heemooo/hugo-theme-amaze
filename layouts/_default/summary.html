@@ -1,0 +1,34 @@
+<article class="am-g blog-entry-article">
+        <div class="am-u-lg-6 am-u-lg-12 am-u-sm-12 blog-entry-text post-preview">
+            <div class="topic-header">
+                <div class="pull-left">
+                    <div class="blog-flex-center">
+                        <div class="blog-flex0">
+                        <img src="{{$.Site.Params.logo}}" alt="" class="link avatar avatar-image">
+                        </div>
+                        <div class="author-lockup blog-flex1">
+                            <a class="link" href="{{ .RelPermalink }}" >{{.Site.Title}}</a>
+                            <span class="in">in</span>
+                            <span class="category-name">
+                               {{ with .Params.categories -}}
+                                  {{ range . }}
+                                  {{- $name := . -}}
+                                  {{- with $.Site.GetPage "taxonomy" (printf "categories/%s" $name) | default ($.Site.GetPage "taxonomy" (printf "categories/%s" ($name | urlize))) -}}
+                                    <a href="{{ .Permalink }}"> {{ $name }} </a>
+                                  {{ end -}}
+                                  {{ end }}
+                              {{- end }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            <span class="pull-right time pc_time">{{dateFormat (.Site.Params.dateFormatToUse) .Date}}</span>
+            </div>
+        <h1 class="post-index-title"><a target="_blank" itemtype="url" href="{{ .Permalink }}">{{.Title}}</a></h1>
+        <div class="post-content-preview">
+            {{ .Summary }}
+        </div>
+        <div class="clearfix topic-footer">
+            <span class="pull-left time mobile_time">July 12,2019</span>
+        </div>
+</article>

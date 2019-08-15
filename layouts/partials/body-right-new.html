@@ -1,0 +1,21 @@
+<section>
+    <div class="sidebar-header">
+        <span class="sidebar-header-title">
+            最新文章
+        </span>
+    </div>
+    <div class="sidebar-list" style="width:400px;">
+        <ul class="sidebar-list-body sidebar-list-items">
+            {{- $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 10) }}
+            <section id="archive" class="archive">
+                {{- range $index, $element := $paginator.Pages -}}
+                {{- $thisYear := $element.Date.Format "2006" }}
+                {{- $lastElement := $index | add -1 | index $paginator.Pages }}
+                <li class="sidebar-list-item">
+                    <a href="{{ $element.RelPermalink }}">  {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}&nbsp;{{ .Title }}</a>
+                </li>
+                {{- end -}}
+            </section>
+        </ul>
+    </div>
+</section>

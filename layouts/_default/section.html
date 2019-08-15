@@ -1,0 +1,44 @@
+{{define "header"}}
+{{ partial "body-header.html" . }}
+{{end}}
+{{ define "main"}}
+{{- $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 10) }}
+<section id="archive" class="archive">
+    {{- if not $paginator.HasPrev }}
+    <div class="archive-title">
+      <span class="archive-post-counter">
+        {{- $length := len .Data.Pages }}
+          {{ i18n "counter_archives" $length }}
+      </span>
+    </div>
+    {{- end -}}
+    {{$time := "hello"}}
+    {{- range $index, $element := $paginator.Pages -}}
+    {{- $thisTime := $element.Date.Format "January 2006" }}
+    {{- $lastElement := $index | add -1 | index $paginator.Pages }}
+    {{ if (eq $index 0)}}
+
+    <div class="collection-title">
+        {{with $thisTime}}{{end}}
+        <h2 class="archive-year">{{$time}}||{{ $thisTime }}</h2>
+        <div class="archive-post">
+            <time datetime="{{ .Date.Format "2006-01-02" }}" class="archive-post-time">
+            {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}
+            </time>
+            <span class="archive-post-title">
+        <a href="{{ $element.RelPermalink }}" class="archive-post-link">
+          {{ .Title }}
+        </a>
+      </span>
+        </div>
+    </div>
+    {{else}}
+    <div class="collection-title">{{$time}}||{{$thisTime}}</div>
+    {{- end }}
+    {{- end -}}
+</section>
+
+<!-- pagination -->
+{{ partial "pagination.html" . }}
+
+{{ end }}

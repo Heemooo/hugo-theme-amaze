@@ -1,0 +1,14 @@
+<section>
+    <div class="sidebar-header">
+        <span class="sidebar-header-title">
+            标签列表
+        </span>
+    </div>
+    <div class="tags">
+        {{ range $tagName, $taxonomy := $.Site.Taxonomies.tags }}
+        {{ with $.Site.GetPage "taxonomy" (printf "tags/%s" $tagName) }}
+        <a href="{{ .Permalink }}">{{ $tagName }}</a>
+        {{ end }}
+        {{ end }}
+    </div>
+</section>

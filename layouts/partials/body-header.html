@@ -1,0 +1,13 @@
+<header class="intro-header" style="background-image: url('{{$.Site.Params.backgroundUrl}}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>{{$.Site.Title}}</h1>
+                    <span
+                        class="subheading">{{if $.Site.Params.SubTitle}}{{$.Site.Params.SubTitle}}{{else}}这是一个小标题{{end}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

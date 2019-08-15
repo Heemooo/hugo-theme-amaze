@@ -1,0 +1,45 @@
+{{define "header"}}
+<header class="intro-header" style="background-image: url('{{$.Site.Params.backgroundUrl}}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>{{.Title}}</h1>
+                    <span class="meta">@{{$.Site.Title}} &nbsp;{{dateFormat (.Site.Params.dateFormatToUse) .Date}}</span>
+                    <div class="tags post-tags">
+                        {{ with .Params.tags -}}
+                        <div class="post-tags">
+                            {{ range . }}
+                            {{- $name := . -}}
+                            {{- with $.Site.GetPage "taxonomy" (printf "tags/%s" $name) | default ($.Site.GetPage "taxonomy" (printf "tags/%s" ($name | urlize))) -}}
+                            <a href="{{ .Permalink }}">{{ $name }}</a>
+                            {{ end -}}
+                            {{ end }}
+                        </div>
+                        {{- end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{{end}}
+{{define "main"}}
+<!-- content start -->
+<div class="container">
+    <div class="am-g am-g-fixed blog-fixed">
+        <div class="am-u-lg-12 am-u-sm-12">
+            <article class="am-article blog-article-p article-trigger">
+                <div id="post-content" class="am-article-bd">
+                    {{.Content}}
+                </div>
+            </article>
+            <hr>
+        </div>
+    </div>
+</div>
+<div id="directory-content" class="directory-content">
+    <div id="directory">
+    </div>
+</div>
+{{end}}
