@@ -1,12 +1,9 @@
-<!DOCTYPE HTML>
-<html lang="{{.Site.LanguageCode}}">
-<head>
-{{template "head".}}
-</head>
-<body id="blog">
-{{template "nav".}}
-{{template "left-body".}}
-{{template "right-body".}}
-{{template "footer".}}
-</body>
-</html>
+{{define "header"}}
+{{ partial "body-header.html" . }}
+{{end}}
+{{define "main"}}
+<div class="am-g am-g-fixed blog-fixed">
+    {{ partial "body-left.html" . }}
+    {{ partial "body-right.html" . }}
+</div>
+{{end}}

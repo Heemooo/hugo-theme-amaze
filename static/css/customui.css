@@ -291,6 +291,10 @@ letter-spacing: 1px;
 .navbar-custom .nav li a:active {
 background: rgba(0, 0, 0, 0.12);
 }
+.nav>.active{
+  background: blue;
+  color: blue;
+}
 @media only screen and (min-width: 768px) {
 .navbar-custom {
   background: transparent;
