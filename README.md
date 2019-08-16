@@ -24,7 +24,7 @@
 
 
 ## 主题预览
-![tale-theme-amaze.png](https://raw.githubusercontent.com/zoujiayu/tale-theme-amaze/master/screenshot.png)
+![page1](/Heemooo/amaze/blob/master/images/page1.png?raw=true)
 
 
 ## 安装
@@ -33,6 +33,8 @@
 git clone https://github.com/otale/Tale-Theme-Amaze.git
 ```
 2.将主题放入Hugo的themes目录下，并重命名为amaze
+
 3.将主题下的`exampleSite`文件夹的内容复制到博客的根目录下
+
 4.Hugo的config.toml配置文件中加入`theme="amaze"`，使用`hugo server`启动Hugo
 或者直接使用`hugo server -t=theme`启动Hugo
