@@ -3,10 +3,10 @@ license     = "MIT"
 licenselink = "https://github.com/heemooo/amaze/master/LICENSE"
 description = "All you need for a blog in one template."
 homepage    = "https://github.com/heemooo/amaze"
-customdemo  = "https://orianna-zzo.github.io/AllinOne-html/"
+customdemo  = "https://heemooo.gitee.io"
 tags        = ["blog", "personal"]
 features    = ["full image carousel", "hierachical toc", "katex"]
-min_version = 0.46
+min_version = 0.51
 
 [author]
   name      = "heemooo"
