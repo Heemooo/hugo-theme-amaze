@@ -1,6 +1,6 @@
 name        = "amaze"
 license     = "MIT"
-licenselink = "https://github.com/heemooo/amaze/master/LICENSE"
+licenselink = "https://github.com/Heemooo/amaze/blob/master/LICENSE"
 description = "All you need for a blog in one template."
 homepage    = "https://github.com/heemooo/amaze"
 customdemo  = "https://heemooo.gitee.io"

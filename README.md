@@ -40,3 +40,5 @@ git clone https://github.com/otale/Tale-Theme-Amaze.git
 
 4.Hugo的config.toml配置文件中加入`theme="amaze"`，使用`hugo server`启动Hugo
 或者直接使用`hugo server -t=theme`启动Hugo
+
+[LICENSE](https://github.com/Heemooo/amaze/blob/master/LICENSE)
