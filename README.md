@@ -24,7 +24,9 @@
 
 
 ## 主题预览
-![page1](/Heemooo/amaze/blob/master/images/page1.png?raw=true)
+![page1](https://github.com/Heemooo/amaze/blob/master/images/page1.png)
+![page2](https://github.com/Heemooo/amaze/blob/master/images/page2.png)
+![page3](https://github.com/Heemooo/amaze/blob/master/images/page3.png)
 
 
 ## 安装
