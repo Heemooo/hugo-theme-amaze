@@ -2,6 +2,9 @@
 <html lang="{{.Site.LanguageCode}}">
 
 <head>
+    {{- block "title" . -}}
+    <title> {{ if .IsPage }}{{ .Title }} - {{ .Site.Title }}{{ else }}{{ .Site.Title }}的博客{{ end }}</title>
+    {{- end -}}
     {{ partial "head.html" . }}
 </head>
 
