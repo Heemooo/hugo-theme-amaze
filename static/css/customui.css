@@ -292,8 +292,7 @@ letter-spacing: 1px;
 background: rgba(0, 0, 0, 0.12);
 }
 .nav>.active{
-  background: blue;
-  color: blue;
+  background: rgba(255,255,255,.15);
 }
 @media only screen and (min-width: 768px) {
 .navbar-custom {
@@ -1370,6 +1369,7 @@ padding: 20px 15% 0;
 }
 
 .archive-page .categorys-title {
+clear:both;
 font-size: 16px;
 position: relative;
 margin: 10px auto;
@@ -2070,4 +2070,24 @@ margin: 20px auto 10px
   .directory-content {
     display: none;
   }
+}
+.tag-cloud {
+  margin: 2em 0 3em;
+  text-align: center;
+  font-family: Athelas,STHeiti,Microsoft Yahei,serif;
+}
+.tag-cloud .tag-cloud-title {
+  display: inline-block;
+  font-size: 24px;
+  color: #c05b4d;
+  border-bottom: 2px solid #c05b4d;
+}
+.tag-cloud .tag-cloud-tags a {
+  display: inline-block;
+  position: relative;
+  margin: 5px 10px;
+  word-wrap: break-word;
+  transition-duration: .2s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
 }

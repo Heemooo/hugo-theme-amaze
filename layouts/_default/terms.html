@@ -1,6 +1,10 @@
-{{ define "title" }}{{ i18n .Data.Plural }} - {{ .Site.Title }}{{ end }}
+{{ define "header" }}
+{{partial "header-little.html" . }}
+{{ end }}
 
-{{ define "content" }}
+{{ define "main" }}
+<div class="container-fluid archive-page clearfix">
+  <div class="categorys-item">
   {{ $termName := .Data.Singular }}
   {{ $terms := .Data.Terms.ByCount }}
   {{ $length := len $terms }}
@@ -13,32 +17,36 @@
     {{ $pages := .Pages }}
     {{ with $.Site.GetPage "taxonomy" (printf "%s/%s" $type $term) }}
       <section id="archive" class="archive">
-        <div class="archive-title">
-        </div>
-          <div class="collection-title">
-            <h2 class="archive-year">
-              <a href="{{ .Permalink }}">
-                {{ i18n "category" }}{{ $term }}
-              </a>
-            </h2>
-          </div>
-
+        <div class="categorys-title"> {{ i18n "category" }}{{ $term }}</div>
+        <div class="post-lists">
+          <div class="post-lists-body">
           {{ range first 5 $pages }}
-            <div class="archive-post">
-              <time datetime="{{ .Date.Format "2006-01-02" }}" class="archive-post-time">
-                {{ .Date.Format "2006-01-02" }}
-              </time>
-              <span class="archive-post-title">
-                <a href="{{ .RelPermalink }}" class="archive-post-link">
-                  {{ .Title }}
-                </a>
-              </span>
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-date">{{ .Date.Format "Mon, 2 Jan 2006" }}</div>
+                  </div>
+                </div>
+              </div>
             </div>
           {{ end }}
+
           {{ if gt (len $pages) 5 }}
-            <div class="more-post">
-              <a href="{{ .Permalink }}" class="more-post-link">{{ i18n "morePost" }}</a>
+        <div class="post-list-item">
+          <div class="post-list-item-container">
+            <div class="item-label">
+              <div class="item-title">
+                <a href="{{ .Permalink }}">{{ i18n "morePost" }}</a>
+              </div>
             </div>
+          </div>
+        </div>
+          </div>
+        </div>
           {{ end }}
       </section>
     {{ end }}
@@ -116,5 +124,6 @@
     {{ end }}
 
   {{ end }}
-
+  </div>
+</div>
 {{ end }}
