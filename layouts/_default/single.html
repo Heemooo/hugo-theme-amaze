@@ -15,27 +15,4 @@
         </div>
     </div>
 </div>
-<style>
-    .post-toc{
-        position: relative;
-        z-index: 0;
-        max-width: 720px;
-        margin-right: auto!important;
-        margin-left: auto!important;
-        text-align: right;
-        opacity: 1;
-    }
-    .post-toc-title{
-        color: rgb(243, 129, 129); font-weight: 600;
-    }
-    #post-toc ul,#post-toc li{list-style:none;display:block;}
-</style>
-<div class="post-toc" id="post-toc">
-    <div id="directory">
-        <h2 class="post-toc-title">{{ i18n "toc" }}</h2>
-        <div class="post-toc-content">
-            {{.TableOfContents}}
-        </div>
-    </div>
-</div>
 {{end}}
