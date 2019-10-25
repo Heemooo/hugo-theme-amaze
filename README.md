@@ -30,15 +30,27 @@
 
 
 ## 安装
+1.在D:盘创建Hugo目录，并在Hugo下创建bin目录和Sites目录
+2.将Hugo.exe复制到bin目录下
+3.打开cmd,输入：
+```
+d:
+cd Hugo/Sites
+set PATH=%PATH%;D:\Hugo\bin
+hugo new site heemooo
+```
 1.克隆主题
 ```
-git clone https://github.com/otale/Tale-Theme-Amaze.git
+git clone git@github.com:Heemooo/hugo-theme-amaze.git
 ```
-2.将主题放入Hugo的themes目录下，并重命名为amaze
+2.将主题放入Hugo的themes目录下，并重命名为hugo-theme-amaze
 
-3.将主题下的`exampleSite`文件夹的内容复制到博客的根目录下
+3.将主题下的`exampleSite`文件夹的内容复制到heemooo的根目录下
 
-4.Hugo的config.toml配置文件中加入`theme="amaze"`，使用`hugo server`启动Hugo
-或者直接使用`hugo server -t=theme`启动Hugo
+4.cmd进入heemooo目录，执行以下命令即可启动成功
+```
+cd heemooo
+hugo server
+```
 
 [LICENSE](https://github.com/Heemooo/amaze/blob/master/LICENSE)

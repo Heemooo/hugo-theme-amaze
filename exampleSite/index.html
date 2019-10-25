@@ -1,0 +1,9 @@
+{{define "header"}}
+{{ partial "header.html" . }}
+{{end}}
+{{define "main"}}
+<div class="am-g am-g-fixed blog-fixed">
+    {{ partial "body-left.html" . }}
+    {{ partial "body-right.html" . }}
+</div>
+{{end}}

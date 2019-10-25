@@ -1,18 +1,56 @@
-baseURL = "http://example.org/"
-languageCode = "zh_cn"
+# This is a simple configuration.
+# And see https://gohugo.io/getting-started/configuration/ .
+
+baseURL = "https://heemooo.gitee.io/"
 title = "景阳冈上挨过打"
-theme = "amaze"
-watch = true
-uglyURLs = true
-[Params]
-slidesDirPath = "themes/AllinOne/static/img/header-slides"
-slidesDirPathURL = "img/header-slides"
-SubTitle = "逍遥天地外，不在五行中"
-GitHub = "heemooo"
-QQ = "396518407"
-WeiBo = "狗一样的江湖"
-backgroundUrl = "https://hemm.site/snowgitlabk.jpg"
-logo = "https://hemm.site/logo.png-logo"
-[taxonomies]
-  category = "categories"
-  tag = "tags"
+theme= "hugo-theme-amaze"
+enableRobotsTXT = true
+enableEmoji = true
+uglyURLs = true           # enable url .html
+hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
+paginate = 5              # Number of articles displayed on the homepage  # 首页每页显示的文章数
+rssLimit = 20             # Limit Entry Count to Rss file # 限制 Rss 文章输出数量
+# language support # en / zh-cn / other... translations present in i18n/
+defaultContentLanguage = "zh-cn"           # Default language to use
+[languages.zh-cn]
+  languageCode = "zh-cn"
+[author]                  # essential                     # 必需
+  name = "heemooo"
+[sitemap]                 # essential                     # 必需
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+[[menu.main]]             # config your menu              # 配置目录
+  name = "首页"
+  weight = 10
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "归档"
+  weight = 20
+  identifier = "archives"
+  url = "/post.html"
+[[menu.main]]
+  name = "标签"
+  weight = 40
+  identifier = "tags"
+  url = "/tags.html"
+[[menu.main]]
+  name = "分类"
+  weight = 30
+  identifier = "categories"
+  url = "/categories.html"
+[params]
+  backgroundUrl = "/images/snowgitlabk.jpg"
+  logo = "/img/logo.png"
+  since = "2019"            # Site creation time          # 站点建立时间
+  homeFullContent = false   # if false, show post summaries on home page. Othewise show full content.
+  rssFullContent = true     # if false, Rss feed instead of the summary
+  # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
+  SubTitle="逍遥天地外，不在五行中"
+  # The date format to use; for a list of valid formats, see https://gohugo.io/functions/format/
+  dateFormatToUse = "2006-01-02"
+  [params.social]                                         # 社交链接
+    GitHub = "heemooo"
+    QQ = "396518407"
+    WeiBo = "https://weibo.com/1736003065/profile?topnav=1&wvr=6&is_all=1"
