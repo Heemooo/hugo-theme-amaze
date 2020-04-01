@@ -1,6 +1,6 @@
 <div class="am-u-lg-8 am-u-sm-12">
     {{/* (index .Site.Paginate) */}}
-    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+    {{ $paginator := .Paginate (where .Site.RegularPages "Section" "post") }}
     {{ range $paginator.Pages }}
     {{ .Render "summary" }}
     {{ end }}

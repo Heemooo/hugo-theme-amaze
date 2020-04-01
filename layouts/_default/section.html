@@ -1,0 +1,32 @@
+{{define "header"}}
+{{ partial "header-little.html" . }}
+{{end}}
+{{ define "main"}}
+{{- $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 100) }}
+<div class="container-fluid archive-page clearfix">
+    <div class="categorys-item">
+        {{- range $index, $element := $paginator.Pages -}}
+        {{- $thisYear := $element.Date.Format "2006年1月" }}
+        {{- $lastElement := $index | add -1 | index $paginator.Pages }}
+        {{ if or (eq $index 0) ( ne ($lastElement.Date.Format "2006年1月") $thisYear ) }}
+        <div class="categorys-title">{{ $thisYear }}</div>
+        {{- end }}
+        <div class="post-list-item">
+            <div class="post-list-item-container">
+                <div class="item-label">
+                    <div class="item-title">
+                        <a href="{{ $element.RelPermalink }}">{{ .Title }}</a>
+                    </div>
+                    <div class="item-meta clearfix">
+                        <div class="item-meta-date">{{ .Date.Format "Mon, 2 Jan 2006" }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{- end -}}
+    </div>
+</div>
+<!-- pagination -->
+{{ partial "pagination.html" . }}
+
+{{ end }}
