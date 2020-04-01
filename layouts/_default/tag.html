@@ -1,0 +1,32 @@
+{{/*
+<!--分类、标签更多页面-->
+*/}}
+{{ define "title" -}}
+{{ if eq .Data.Singular "author" -}}
+{{- $author := (index (.Site.Data.authors | default dict) .Title) -}}
+{{- $author_lang := (index ($author | default dict) .Site.Language.Lang) -}}
+{{- $author_name := $author_lang.name.display | default $author.name.display | default .Title -}}
+<title>{{ $author_name }} · {{ .Site.Title }}</title>
+{{- else -}}
+<title>{{ .Title }} · {{ .Site.Title }}的博客</title>
+{{- end }}
+{{- end }}
+
+{{define "header"}}
+{{ partial "header-little.html" . }}
+{{end}}
+
+{{ define "main"}}
+{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 10) }}
+<div class="container-fluid archive-page clearfix">
+    <div class="categorys-item">
+        {{ range $paginator.Pages  }}
+        {{.Render "summary" }}
+        {{ end }}
+    </div>
+</div>
+
+<!-- pagination -->
+{{ partial "pagination.html" . }}
+
+{{ end }}

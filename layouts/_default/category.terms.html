@@ -1,0 +1,57 @@
+{{ define "title" }}<title>{{ i18n .Data.Plural }} - {{ .Site.Title }}的博客</title>{{ end }}
+{{ define "header" }}
+{{partial "header-little.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<div class="container-fluid archive-page clearfix">
+    <div class="categorys-item">
+        {{ $termName := .Data.Singular }}
+        {{ $terms := .Data.Terms.ByCount }}
+        {{ $length := len $terms }}
+        {{ $type := .Type }}
+
+        <!-- Categories Page -->
+        {{ range $terms }}
+        {{ $term := .Term }}
+        {{ $pages := .Pages }}
+        {{ with $.Site.GetPage "taxonomy" (printf "%s/%s" $type $term) }}
+        <section id="archive" class="archive">
+            <div class="categorys-title"> {{ i18n "category" }}{{ $term }}</div>
+            <div class="post-lists">
+                <div class="post-lists-body">
+                    {{ range first 5 $pages }}
+                    <div class="post-list-item">
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title">
+                                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">{{ .Date.Format "Mon, 2 Jan 2006" }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+
+                    {{ if gt (len $pages) 5 }}
+                    <div class="post-list-item">
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title">
+                                    <a href="{{ .Permalink }}">{{ i18n "morePost" }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </section>
+        {{ end }}
+
+        {{ end }}
+    </div>
+</div>
+{{ end }}

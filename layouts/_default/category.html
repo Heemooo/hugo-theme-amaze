@@ -11,16 +11,18 @@
 <title>{{ .Title }} · {{ .Site.Title }}的博客</title>
 {{- end }}
 {{- end }}
+
 {{define "header"}}
 {{ partial "header-little.html" . }}
 {{end}}
+
 {{ define "main"}}
 {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 10) }}
 <div class="container-fluid archive-page clearfix">
     <div class="categorys-item">
-    {{ range $paginator.Pages  }}
-    {{.Render "summary" }}
-    {{ end }}
+        {{ range $paginator.Pages  }}
+        {{.Render "summary" }}
+        {{ end }}
     </div>
 </div>
 
