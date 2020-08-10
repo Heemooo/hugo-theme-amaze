@@ -11,14 +11,11 @@
 <body id="blog">
     {{ partial "nav.html" . }}
 
-    {{block "header" . }}
+    {{block "header" . }}{{end}}
 
-    {{end}}
-
-    {{block "main" . }}
-
-    {{end}}
-    {{ partial "footer.html" . }}
+    {{block "main" . }}{{end}}
+	
+	{{block "footer" . }}{{ partial "footer.html" . }}{{end}}
 </body>
 
 </html>
